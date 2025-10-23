@@ -1,1 +1,1 @@
-# inventario_api
+# Stock tracking inventory
