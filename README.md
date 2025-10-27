@@ -11,6 +11,7 @@ how to improve the existing code please read the following links
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Hibernate ORM](https://hibernate.org/orm/quickly/)
+* [JUnit] (https://docs.junit.org/current/user-guide/ ) 
 
 ### Colaborators
 * Fulvio Moya (@fulviomoya)
