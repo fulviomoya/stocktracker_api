@@ -1,0 +1,13 @@
+
+
+┏━┓╺┳╸┏━┓┏━╸╻┏    ╺┳╸┏━┓┏━┓┏━╸╻┏ ╻┏┓╻┏━╸
+┗━┓ ┃ ┃ ┃┃  ┣┻┓    ┃ ┣┳┛┣━┫┃  ┣┻┓┃┃┗┫┃╺┓
+┗━┛ ╹ ┗━┛┗━╸╹ ╹╺━╸ ╹ ╹┗╸╹ ╹┗━╸╹ ╹╹╹ ╹┗━┛
+                             Development
+
+  Application: ${spring.application.name}
+ActualVersion: ${spring.application.version}
+  Spring Boot:${spring-boot.formatted-version}
+      Profile: ${AnsiColor.RED}${spring.profiles.active:default}${AnsiColor.DEFAULT}
+
+--
