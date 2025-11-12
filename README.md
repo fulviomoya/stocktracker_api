@@ -17,7 +17,3 @@ how to improve the existing code please read the following links
 ![entity-relation diagram](/docs/diagrams/ER_diagram.png)
 _Entity relation diagram_
 
-### Colaborators
-* Fulvio Moya (@fulviomoya)
-* Josue Piña (@josuesolo30)
-* Luis Alfonso (@luisxaam)
