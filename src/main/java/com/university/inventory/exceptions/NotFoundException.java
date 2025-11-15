@@ -1,9 +1,9 @@
 package com.university.inventory.exceptions;
 
-public class RecursoNoEncontradoException extends Exception {
+public class NotFoundException extends Exception {
     private String message;
 
-    public RecursoNoEncontradoException(String message) {
+    public NotFoundException(String message) {
         this.message = message;
     }
 

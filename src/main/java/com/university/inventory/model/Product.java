@@ -1,4 +1,4 @@
 package com.university.inventory.model;
 
-public record Producto(String nombre , String descripcion) {
+public record Product(String name, String description) {
 }

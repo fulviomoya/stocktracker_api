@@ -1,4 +1,9 @@
 package com.university.inventory.dto;
 
-public class ContactSupplierRequest {
+import java.time.LocalDateTime;
+
+public record ContactSupplierRequest(Long id, String nombres, String apellidos, String email, String telefono,
+                                     String cargo, boolean esPrincipal, LocalDateTime creadoEn,
+                                     LocalDateTime actualizadoEn) {
+
 }

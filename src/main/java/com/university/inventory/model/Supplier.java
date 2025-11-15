@@ -14,15 +14,6 @@ public class Supplier {
     @Column(nullable = false, unique = true)
     private String name;
     
-    @Column(name = "contact_email")
-    private String contactEmail;
-    
-    @Column(name = "contact_phone")
-    private String contactPhone;
-    
-    @Column(name = "address")
-    private String address;
-    
     @Column(name = "created_at")
     private LocalDateTime createdAt;
     
@@ -44,11 +35,8 @@ public class Supplier {
     public Supplier() {
     }
     
-    public Supplier(String name, String contactEmail, String contactPhone, String address) {
+    public Supplier(String name) {
         this.name = name;
-        this.contactEmail = contactEmail;
-        this.contactPhone = contactPhone;
-        this.address = address;
     }
     
     // Getters and Setters
@@ -66,30 +54,6 @@ public class Supplier {
     
     public void setName(String name) {
         this.name = name;
-    }
-    
-    public String getContactEmail() {
-        return contactEmail;
-    }
-    
-    public void setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
-    }
-    
-    public String getContactPhone() {
-        return contactPhone;
-    }
-    
-    public void setContactPhone(String contactPhone) {
-        this.contactPhone = contactPhone;
-    }
-    
-    public String getAddress() {
-        return address;
-    }
-    
-    public void setAddress(String address) {
-        this.address = address;
     }
     
     public LocalDateTime getCreatedAt() {
