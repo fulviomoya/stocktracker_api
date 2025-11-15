@@ -11,9 +11,9 @@ how to improve the existing code please read the following links
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Hibernate ORM](https://hibernate.org/orm/quickly/)
-* [JUnit] (https://docs.junit.org/current/user-guide/ ) 
+* [JUnit](https://docs.junit.org/current/user-guide/ )
 
-### Colaborators
-* Fulvio Moya (@fulviomoya)
-* Josue Piña (@josuesolo30)
-* Luis Alfonso (@luisxaam)
+## Diagrams
+![entity-relation diagram](/docs/diagrams/ER_diagram.png)
+_Entity relation diagram_
+
