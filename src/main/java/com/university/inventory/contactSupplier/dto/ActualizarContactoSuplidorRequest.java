@@ -1,4 +1,4 @@
-package com.university.inventory.dto;
+package com.university.inventory.contactSupplier.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;

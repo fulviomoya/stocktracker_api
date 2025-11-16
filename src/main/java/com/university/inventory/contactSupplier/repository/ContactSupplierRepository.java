@@ -1,6 +1,6 @@
-package com.university.inventory.repository;
+package com.university.inventory.contactSupplier.repository;
 
-import com.university.inventory.model.SupplierContact;
+import com.university.inventory.contactSupplier.model.SupplierContact;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

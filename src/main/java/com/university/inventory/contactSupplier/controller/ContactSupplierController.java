@@ -1,10 +1,10 @@
-package com.university.inventory.controller;
+package com.university.inventory.contactSupplier.controller;
 
 
 import com.university.inventory.exceptions.InformationExistsException;
 import com.university.inventory.exceptions.NotFoundException;
-import com.university.inventory.service.ContactSupplierService;
-import com.university.inventory.dto.*;
+import com.university.inventory.contactSupplier.service.ContactSupplierService;
+import com.university.inventory.contactSupplier.dto.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

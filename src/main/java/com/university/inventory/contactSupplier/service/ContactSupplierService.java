@@ -1,12 +1,14 @@
-package com.university.inventory.service;
+package com.university.inventory.contactSupplier.service;
 
 import com.university.inventory.exceptions.InformationExistsException;
 import com.university.inventory.exceptions.NotFoundException;
-import com.university.inventory.model.SupplierContact;
-import com.university.inventory.dto.*;
-import com.university.inventory.repository.ContactSupplierRepository;
+import com.university.inventory.contactSupplier.model.SupplierContact;
+import com.university.inventory.contactSupplier.dto.*;
+import com.university.inventory.contactSupplier.repository.ContactSupplierRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import static com.university.inventory.contactSupplier.service.mapper.ContactSupplierMapper.toDtoResponse;
 
 
 @Service
@@ -62,17 +64,5 @@ public class ContactSupplierService {
         return toDtoResponse(c);
     }
 
-    private ContactSupplierResponse toDtoResponse(SupplierContact c) {
-        return new ContactSupplierResponse(
-                c.getId(),
-                c.getNombres(),
-                c.getApellidos(),
-                c.getEmail(),
-                c.getTelefono(),
-                c.getCargo(),
-                c.isEsPrincipal(),
-                c.getCreadoEn(),
-                c.getActualizadoEn()
-        );
-    }
+
 }
