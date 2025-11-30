@@ -1,6 +1,7 @@
-package com.university.inventory.service;
+package com.university.inventory.exceptions;
 
 public class ConflictoException extends Throwable {
     public ConflictoException(String s) {
     }
 }
+

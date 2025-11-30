@@ -1,7 +1,7 @@
-package com.university.inventory.service;
+package com.university.inventory.supplier.service;
 
-import com.university.inventory.model.Supplier;
-import com.university.inventory.repository.SupplierRepository;
+import com.university.inventory.supplier.model.Supplier;
+import com.university.inventory.supplier.repository.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
 package com.university.inventory.contactSupplier.model;
 
-import com.university.inventory.model.Supplier;
+import com.university.inventory.supplier.model.Supplier;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

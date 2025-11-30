@@ -1,6 +1,6 @@
-package com.university.inventory.service;
+package com.university.inventory.supplier.service;
 
-import com.university.inventory.model.Supplier;
+import com.university.inventory.supplier.model.Supplier;
 import java.util.List;
 
 public interface SupplierService {

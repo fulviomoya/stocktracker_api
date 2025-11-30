@@ -1,4 +1,4 @@
-package com.university.inventory.model;
+package com.university.inventory.supplier.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

@@ -1,6 +1,6 @@
 package com.university.inventory.contactSupplier.repository;
 
-import com.university.inventory.model.Product;
+import com.university.inventory.product.model.Product;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -17,7 +17,7 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
            and p.active = false
            and p.deleted = false
     """)
-    int enableProductsBySupplier(@Param("supplierId") UUID supplierId);
+    int enableProductsBySupplier(@Param("supplierId") Long supplierId);
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("""
@@ -27,5 +27,5 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
            and p.active = true
            and p.deleted = false
     """)
-    int disableProductsBySupplier(@Param("supplierId") UUID supplierId);
+    int disableProductsBySupplier(@Param("supplierId") Long supplierId);
 }

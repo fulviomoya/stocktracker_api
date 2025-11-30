@@ -1,7 +1,7 @@
-package com.university.inventory.controller;
+package com.university.inventory.supplier.controller;
 
-import com.university.inventory.model.Supplier;
-import com.university.inventory.service.SupplierService;
+import com.university.inventory.supplier.model.Supplier;
+import com.university.inventory.supplier.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.university.inventory.repository;
+package com.university.inventory.supplier.repository;
 
-import com.university.inventory.model.Supplier;
+import com.university.inventory.supplier.model.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

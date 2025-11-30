@@ -1,12 +1,10 @@
 package com.university.inventory.contactSupplier.model;
 
 import com.university.inventory.contactSupplier.dto.SupplierProductActivationResponse;
-import com.university.inventory.model.Supplier;
-import com.university.inventory.contactSupplier.repository;
-import com.university.inventory.repository.SupplierRepository;
-import com.university.inventory.exception.ResourceNotFoundException;
+import com.university.inventory.supplier.model.Supplier;
+import com.university.inventory.contactSupplier.repository.ProductRepository;
+import com.university.inventory.supplier.repository.SupplierRepository;
 import jakarta.transaction.Transactional;
-import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -22,10 +20,10 @@ public class SupplierProductActivationService {
     }
 
     @Transactional
-    public SupplierProductActivationResponse enableProductsBySupplier(UUID supplierId) {
+    public SupplierProductActivationResponse enableProductsBySupplier(Long supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)
-                .orElseThrow(() -> new ResourceNotFoundException("Supplier not found"));
+                .orElseThrow(() -> new RuntimeException("Supplier not found"));
 
         int updated = productRepository.enableProductsBySupplier(supplier.getId());
 
@@ -37,10 +35,10 @@ public class SupplierProductActivationService {
     }
 
     @Transactional
-    public SupplierProductActivationResponse disableProductsBySupplier(UUID supplierId) {
+    public SupplierProductActivationResponse disableProductsBySupplier(Long supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)
-                .orElseThrow(() -> new ResourceNotFoundException("Supplier not found"));
+                .orElseThrow(() -> new RuntimeException("Supplier not found"));
 
         int updated = productRepository.disableProductsBySupplier(supplier.getId());
 

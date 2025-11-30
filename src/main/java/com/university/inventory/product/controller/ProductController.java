@@ -1,4 +1,4 @@
-package com.university.inventory.controller;
+package com.university.inventory.product.controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -7,3 +7,4 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
 
 }
+
