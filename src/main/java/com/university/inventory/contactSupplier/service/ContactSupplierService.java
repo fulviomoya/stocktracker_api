@@ -1,7 +1,7 @@
 package com.university.inventory.contactSupplier.service;
 
-import com.university.inventory.exceptions.InformationExistsException;
-import com.university.inventory.exceptions.NotFoundException;
+import com.university.inventory.commons.exceptions.InformationExistsException;
+import com.university.inventory.commons.exceptions.NotFoundException;
 import com.university.inventory.contactSupplier.model.SupplierContact;
 import com.university.inventory.contactSupplier.dto.*;
 import com.university.inventory.contactSupplier.repository.ContactSupplierRepository;

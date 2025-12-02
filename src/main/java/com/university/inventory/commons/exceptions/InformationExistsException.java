@@ -1,4 +1,4 @@
-package com.university.inventory.exceptions;
+package com.university.inventory.commons.exceptions;
 
 public class InformationExistsException extends Throwable {
     private String message;

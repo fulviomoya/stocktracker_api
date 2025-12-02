@@ -1,8 +1,8 @@
 package com.university.inventory.contactSupplier.controller;
 
 
-import com.university.inventory.exceptions.InformationExistsException;
-import com.university.inventory.exceptions.NotFoundException;
+import com.university.inventory.commons.exceptions.InformationExistsException;
+import com.university.inventory.commons.exceptions.NotFoundException;
 import com.university.inventory.contactSupplier.service.ContactSupplierService;
 import com.university.inventory.contactSupplier.dto.*;
 import jakarta.validation.Valid;
