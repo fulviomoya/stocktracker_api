@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("v1/supplier/contacts")
 public class ContactSupplierController {
@@ -32,8 +34,8 @@ public class ContactSupplierController {
 
     @PutMapping("/{contactoId}")
     public ContactSupplierResponse updateExistsContactInformation(
-            @PathVariable Long suplidorId,
-            @PathVariable Long contactoId,
+            @PathVariable UUID suplidorId,
+            @PathVariable UUID contactoId,
             @Valid @RequestBody ContactSupplierRequest request) {
         try {
             return service.updateInformation(suplidorId, contactoId, request);

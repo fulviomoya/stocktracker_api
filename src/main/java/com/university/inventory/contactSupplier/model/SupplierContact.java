@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(
@@ -12,12 +13,10 @@ import java.time.LocalDateTime;
         uniqueConstraints = @UniqueConstraint(name="uk_suplidor_email", columnNames = {"suplidor_id","email"})
 )
 public class SupplierContact {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "suplidor_id", nullable = false)
-    private Supplier supplier;
+    private UUID supplier;
 
     @Column(nullable = false) private String nombres;
     @Column(nullable = false) private String apellidos;
@@ -29,7 +28,7 @@ public class SupplierContact {
     @CreationTimestamp private LocalDateTime creadoEn;
     @UpdateTimestamp  private LocalDateTime actualizadoEn;
 
-    public Long getId() { return id; }
+    public UUID getId() { return id; }
     public String getNombres() { return nombres; }
     public void setNombres(String nombres) { this.nombres = nombres; }
     public String getApellidos() { return apellidos; }

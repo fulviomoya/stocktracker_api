@@ -5,6 +5,7 @@ import com.university.inventory.supplier.model.Supplier;
 import com.university.inventory.contactSupplier.repository.ProductRepository;
 import com.university.inventory.supplier.repository.SupplierRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -12,7 +13,9 @@ import java.util.UUID;
 @Service
 public class SupplierProductActivationService {
 
+    @Autowired
     private final ProductRepository productRepository;
+    @Autowired
     private final SupplierRepository supplierRepository;
 
     public SupplierProductActivationService(ProductRepository productRepository,
@@ -21,7 +24,6 @@ public class SupplierProductActivationService {
         this.supplierRepository = supplierRepository;
     }
 
-    @Transactional
     public SupplierProductActivationResponse enableProductsBySupplier(UUID supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)
@@ -36,7 +38,6 @@ public class SupplierProductActivationService {
         );
     }
 
-    @Transactional
     public SupplierProductActivationResponse disableProductsBySupplier(UUID supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)

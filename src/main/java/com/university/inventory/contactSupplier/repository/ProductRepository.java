@@ -6,14 +6,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductRepository extends JpaRepository<Product, UUID> {
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("""
         update Product p
            set p.active = true
-         where p.supplier.id = :supplierId
+         where p.supplier = :supplierId
            and p.active = false
            and p.deleted = false
     """)
@@ -23,7 +25,7 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
     @Query("""
         update Product p
            set p.active = false
-         where p.supplier.id = :supplierId
+         where p.supplier = :supplierId
            and p.active = true
            and p.deleted = false
     """)

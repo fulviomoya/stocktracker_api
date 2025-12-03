@@ -17,7 +17,6 @@ public class SupplierProductActivationController {
         this.activationService = activationService;
     }
 
-    // Habilitar productos por suplidor (productos desactivados pasan a activos)
     @PatchMapping("/{supplierId}/products/enable")
     public ResponseEntity<SupplierProductActivationResponse> enableProducts(
             @PathVariable UUID supplierId) {
@@ -28,7 +27,6 @@ public class SupplierProductActivationController {
         return ResponseEntity.ok(response);
     }
 
-    // Deshabilitar productos por suplidor (productos activos pasan a desactivados)
     @PatchMapping("/{supplierId}/products/disable")
     public ResponseEntity<SupplierProductActivationResponse> disableProducts(
             @PathVariable UUID supplierId) {
