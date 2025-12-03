@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -35,7 +36,7 @@ public class SupplierServiceImpl implements SupplierService {
     }
     
     @Override
-    public Supplier getSupplierById(Long id) {
+    public Supplier getSupplierById(UUID id) {
         return supplierRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Supplier not found with id: " + id));
     }

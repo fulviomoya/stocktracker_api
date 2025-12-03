@@ -2,14 +2,15 @@ package com.university.inventory.supplier.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "suppliers")
 public class Supplier {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     
     @Column(nullable = false, unique = true)
     private String name;
@@ -38,16 +39,15 @@ public class Supplier {
     public Supplier(String name) {
         this.name = name;
     }
-    
-    // Getters and Setters
-    public Long getId() {
+
+    public UUID getId() {
         return id;
     }
-    
-    public void setId(Long id) {
+
+    public void setId(UUID id) {
         this.id = id;
     }
-    
+
     public String getName() {
         return name;
     }

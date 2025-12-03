@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/suppliers")
@@ -51,7 +52,7 @@ public class SupplierController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Supplier> getSupplierById(@PathVariable Long id) {
+    public ResponseEntity<Supplier> getSupplierById(@PathVariable UUID id) {
         try {
             Supplier supplier = supplierService.getSupplierById(id);
             return new ResponseEntity<>(supplier, HttpStatus.OK);
