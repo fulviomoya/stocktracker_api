@@ -1,7 +1,9 @@
 package com.university.inventory.contactSupplier.dto;
 
+import java.util.UUID;
+
 public record SupplierProductActivationResponse(
-        Long supplierId,
+        UUID supplierId,
         boolean active,
         int updatedProducts
 ) { }

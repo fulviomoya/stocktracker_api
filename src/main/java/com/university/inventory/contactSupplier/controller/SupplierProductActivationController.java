@@ -5,6 +5,8 @@ import com.university.inventory.contactSupplier.model.SupplierProductActivationS
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/api/v1/suppliers")
 public class SupplierProductActivationController {
@@ -18,7 +20,7 @@ public class SupplierProductActivationController {
     // Habilitar productos por suplidor (productos desactivados pasan a activos)
     @PatchMapping("/{supplierId}/products/enable")
     public ResponseEntity<SupplierProductActivationResponse> enableProducts(
-            @PathVariable Long supplierId) {
+            @PathVariable UUID supplierId) {
 
         SupplierProductActivationResponse response =
                 activationService.enableProductsBySupplier(supplierId);
@@ -29,7 +31,7 @@ public class SupplierProductActivationController {
     // Deshabilitar productos por suplidor (productos activos pasan a desactivados)
     @PatchMapping("/{supplierId}/products/disable")
     public ResponseEntity<SupplierProductActivationResponse> disableProducts(
-            @PathVariable Long supplierId) {
+            @PathVariable UUID supplierId) {
 
         SupplierProductActivationResponse response =
                 activationService.disableProductsBySupplier(supplierId);

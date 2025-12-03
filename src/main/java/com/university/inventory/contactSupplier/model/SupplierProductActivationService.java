@@ -7,6 +7,8 @@ import com.university.inventory.supplier.repository.SupplierRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class SupplierProductActivationService {
 
@@ -20,7 +22,7 @@ public class SupplierProductActivationService {
     }
 
     @Transactional
-    public SupplierProductActivationResponse enableProductsBySupplier(Long supplierId) {
+    public SupplierProductActivationResponse enableProductsBySupplier(UUID supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)
                 .orElseThrow(() -> new RuntimeException("Supplier not found"));
@@ -35,7 +37,7 @@ public class SupplierProductActivationService {
     }
 
     @Transactional
-    public SupplierProductActivationResponse disableProductsBySupplier(Long supplierId) {
+    public SupplierProductActivationResponse disableProductsBySupplier(UUID supplierId) {
 
         Supplier supplier = supplierRepository.findById(supplierId)
                 .orElseThrow(() -> new RuntimeException("Supplier not found"));

@@ -17,7 +17,7 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
            and p.active = false
            and p.deleted = false
     """)
-    int enableProductsBySupplier(@Param("supplierId") Long supplierId);
+    int enableProductsBySupplier(@Param("supplierId") UUID supplierId);
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("""
@@ -27,5 +27,5 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
            and p.active = true
            and p.deleted = false
     """)
-    int disableProductsBySupplier(@Param("supplierId") Long supplierId);
+    int disableProductsBySupplier(@Param("supplierId") UUID supplierId);
 }
